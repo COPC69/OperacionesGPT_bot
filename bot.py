@@ -30,7 +30,7 @@ def main():
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, responder))
 
     # Iniciar el bot
-    updater.start_polling()
+    app.run_polling()
     updater.idle()
 
 if __name__ == "__main__":
