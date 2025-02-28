@@ -27,7 +27,7 @@ def main():
     app = Application.builder().token(TELEGRAM_TOKEN).build()
 
     # Manejar mensajes de texto
-    dp.add_handler(MessageHandler(Filters.text & ~Filters.command, responder))
+    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, responder))
 
     # Iniciar el bot
     updater.start_polling()
