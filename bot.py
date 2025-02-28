@@ -1,7 +1,7 @@
 import os
 import openai
 from telegram import Update
-from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackContext
+from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
 # Obtiene los tokens de las variables de entorno en Render
 TELEGRAM_TOKEN = os.getenv("7887535168:AAHKR-X14zJuGP3klgd9zKz2DMCWaVNy8xo")
@@ -24,8 +24,7 @@ def responder(update: Update, context: CallbackContext):
 
 def main():
     # Configurar el bot de Telegram
-    updater = Updater(TELEGRAM_TOKEN, use_context=True)
-    dp = updater.dispatcher
+    app = Application.builder().token(TELEGRAM_TOKEN).build()
 
     # Manejar mensajes de texto
     dp.add_handler(MessageHandler(Filters.text & ~Filters.command, responder))
