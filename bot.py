@@ -31,7 +31,6 @@ def main():
 
     # Iniciar el bot
     app.run_polling()
-    updater.idle()
 
 if __name__ == "__main__":
     main()
