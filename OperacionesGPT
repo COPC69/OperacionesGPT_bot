@@ -1,0 +1,6 @@
+git ini
+git add
+git commit -m "Subiendo bot de Telegram con GPT-4"  # Guarda los cambios
+git branch -M main            # Cambia a la rama principal
+git remote add origin https://github.com/COPC69/OPERACIONES_GPT_BOT.git  # Conecta GitHub
+git push -u origin main       # Sube el código a GitHub
