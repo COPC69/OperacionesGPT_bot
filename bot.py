@@ -4,8 +4,8 @@ from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, CallbackContext
 
 # Obtiene los tokens de las variables de entorno en Render
-TELEGRAM_TOKEN = os.getenv("7887535168:AAHKR-X14zJuGP3klgd9zKz2DMCWaVNy8xo")
-OPENAI_API_KEY = os.getenv("7035149323:AAFq_odbD1ph-G2xHyXYGTbuOrGaNOr6geM")
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")  # Obtiene el token desde Render
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")  # Obtiene la API Key de OpenAI desde Render
 
 # Configurar OpenAI
 openai.api_key = OPENAI_API_KEY
